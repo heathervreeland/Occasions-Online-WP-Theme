@@ -4,6 +4,29 @@
  * @subpackage Default_Theme
  */
 
+/* 
+ * A function that outputs a subdomain string 
+ * added by Ben Kaplan - 10/21/11 - benzot@gmail.com
+ */
+function print_subdomain() {
+
+  // pull the URL for dev/production purposes
+  $urlParts = explode('.', $_SERVER['HTTP_HOST']);
+
+  // set the location to www
+  $location = 'www';
+
+  // pull the first element of the URL
+  $subdomain = $urlParts[0];
+
+  // if the first element is 'dev', then reset the location (aka subdomain) to 'dev'
+  if ( $subdomain == 'dev' ) {
+    $location = $subdomain;
+  }
+
+  echo $subdomain;
+}
+
 //XX
 $img_base_path 		= '/home/oonline/public_html';
 //$img_base_path 		= '/home/oonline/2011';
