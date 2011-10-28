@@ -24,7 +24,7 @@ function print_subdomain() {
     $location = $subdomain;
   }
 
-  echo $subdomain;
+  return $subdomain;
 }
 
 //XX

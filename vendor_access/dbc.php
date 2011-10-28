@@ -24,7 +24,7 @@ Note: If you use cpanel, the name will be like account_database
 *************************************************************/
 //XX
 
-//added by Ben Kaplan - 10/28/11 - prints out dev or www depending upon environment
+//added by Ben Kaplan - 10/28/11 - prints out dev or {$subdomain} depending upon environment
 $subdomain = print_subdomain();
 
 define ("PAGE_ADMIN",		"https://{$subdomain}.occasionsonline.com/advertisers/admin"); // admin.php
