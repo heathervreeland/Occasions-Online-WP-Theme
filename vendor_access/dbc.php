@@ -23,33 +23,37 @@ Please complete wherever marked xxxxxxxxx
 Note: If you use cpanel, the name will be like account_database
 *************************************************************/
 //XX
-define ("PAGE_ADMIN",		"https://www.occasionsonline.com/advertisers/admin"); // admin.php
-define ("PAGE_LOGIN",		"https://www.occasionsonline.com/advertisers/login"); // login.php
-define ("PAGE_LOGOUT",		"https://www.occasionsonline.com/advertisers/logout"); // logout.php
-define ("PAGE_HOME",		"https://www.occasionsonline.com/advertisers/home"); // home.php
-define ("PAGE_PROFILES",	"https://www.occasionsonline.com/advertisers/profiles"); // profiles.php
-define ("PAGE_PROFILE",		"https://www.occasionsonline.com/advertisers/profile"); // profile.php
-define ("PAGE_SETTINGS",	"https://www.occasionsonline.com/advertisers/settings"); // settings.php
-define ("PAGE_REGISTER",	"https://www.occasionsonline.com/advertisers/register"); // register.php
-define ("PAGE_FORGOT",		"https://www.occasionsonline.com/advertisers/forgot"); // forgot.php
-define ("PAGE_ACTIVATE",	"https://www.occasionsonline.com/advertisers/activate"); // activate.php
-define ("PAGE_THANKYOU",	"https://www.occasionsonline.com/advertisers/thankyou"); // thankyou.php
-define ("PAGE_CHECKUSER",	"https://www.occasionsonline.com/advertisers/checkuser"); // checkuser.php
-define ("PAGE_LEADS",		"https://www.occasionsonline.com/advertisers/leads"); // leads.php
-define ("PAGE_EVENTS",		"https://www.occasionsonline.com/advertisers/events"); // events.php
-define ("PAGE_EVENT",		"https://www.occasionsonline.com/advertisers/event"); // event.php
-define ("PAGE_DO",			"https://www.occasionsonline.com/advertisers/do"); // do.php
-define ("PAGE_DOIMAGE",		"https://www.occasionsonline.com/advertisers/doimage"); // do_image.php
-define ("PAGE_UPGRADE",		"https://www.occasionsonline.com/advertisers/upgrade"); // upgrade.php
-define ("PAGE_UPGRADED",	"https://www.occasionsonline.com/advertisers/upgraded"); // upgraded.php
-define ("PAGE_PAYMENT",		"https://www.occasionsonline.com/advertisers/payment"); // payment.php
-define ("PAGE_PAYMENTMADE",	"https://www.occasionsonline.com/advertisers/paymentmade"); // paymentmade.php
-define ("PAGE_TERMS",		"https://www.occasionsonline.com/advertisers/terms"); // terms.php
-define ("PAGE_SHOWS",		"https://www.occasionsonline.com/advertisers/shows"); // shows.php
-define ("PAGE_BADGES",		"https://www.occasionsonline.com/advertisers/badges"); // badges.php
-define ("PAGE_SUBSCRIBERS",	"https://www.occasionsonline.com/advertisers/subscribers"); // subscribers.php
-define ("PAGE_FAQ",			"https://www.occasionsonline.com/advertisers/faq"); // faq.php
-define ("PAGE_CONTACTUS",	"https://www.occasionsonline.com/advertisers/contactus"); // contactus.php
+
+//added by Ben Kaplan - 10/28/11 - prints out dev or www depending upon environment
+$subdomain = print_subdomain();
+
+define ("PAGE_ADMIN",		"https://{$subdomain}.occasionsonline.com/advertisers/admin"); // admin.php
+define ("PAGE_LOGIN",		"https://{$subdomain}.occasionsonline.com/advertisers/login"); // login.php
+define ("PAGE_LOGOUT",		"https://{$subdomain}.occasionsonline.com/advertisers/logout"); // logout.php
+define ("PAGE_HOME",		"https://{$subdomain}.occasionsonline.com/advertisers/home"); // home.php
+define ("PAGE_PROFILES",	"https://{$subdomain}.occasionsonline.com/advertisers/profiles"); // profiles.php
+define ("PAGE_PROFILE",		"https://{$subdomain}.occasionsonline.com/advertisers/profile"); // profile.php
+define ("PAGE_SETTINGS",	"https://{$subdomain}.occasionsonline.com/advertisers/settings"); // settings.php
+define ("PAGE_REGISTER",	"https://{$subdomain}.occasionsonline.com/advertisers/register"); // register.php
+define ("PAGE_FORGOT",		"https://{$subdomain}.occasionsonline.com/advertisers/forgot"); // forgot.php
+define ("PAGE_ACTIVATE",	"https://{$subdomain}.occasionsonline.com/advertisers/activate"); // activate.php
+define ("PAGE_THANKYOU",	"https://{$subdomain}.occasionsonline.com/advertisers/thankyou"); // thankyou.php
+define ("PAGE_CHECKUSER",	"https://{$subdomain}.occasionsonline.com/advertisers/checkuser"); // checkuser.php
+define ("PAGE_LEADS",		"https://{$subdomain}.occasionsonline.com/advertisers/leads"); // leads.php
+define ("PAGE_EVENTS",		"https://{$subdomain}.occasionsonline.com/advertisers/events"); // events.php
+define ("PAGE_EVENT",		"https://{$subdomain}.occasionsonline.com/advertisers/event"); // event.php
+define ("PAGE_DO",			"https://{$subdomain}.occasionsonline.com/advertisers/do"); // do.php
+define ("PAGE_DOIMAGE",		"https://{$subdomain}.occasionsonline.com/advertisers/doimage"); // do_image.php
+define ("PAGE_UPGRADE",		"https://{$subdomain}.occasionsonline.com/advertisers/upgrade"); // upgrade.php
+define ("PAGE_UPGRADED",	"https://{$subdomain}.occasionsonline.com/advertisers/upgraded"); // upgraded.php
+define ("PAGE_PAYMENT",		"https://{$subdomain}.occasionsonline.com/advertisers/payment"); // payment.php
+define ("PAGE_PAYMENTMADE",	"https://{$subdomain}.occasionsonline.com/advertisers/paymentmade"); // paymentmade.php
+define ("PAGE_TERMS",		"https://{$subdomain}.occasionsonline.com/advertisers/terms"); // terms.php
+define ("PAGE_SHOWS",		"https://{$subdomain}.occasionsonline.com/advertisers/shows"); // shows.php
+define ("PAGE_BADGES",		"https://{$subdomain}.occasionsonline.com/advertisers/badges"); // badges.php
+define ("PAGE_SUBSCRIBERS",	"https://{$subdomain}.occasionsonline.com/advertisers/subscribers"); // subscribers.php
+define ("PAGE_FAQ",			"https://{$subdomain}.occasionsonline.com/advertisers/faq"); // faq.php
+define ("PAGE_CONTACTUS",	"https://{$subdomain}.occasionsonline.com/advertisers/contactus"); // contactus.php
 
 define ("TBL_USERS",		"ao_vendors");
 

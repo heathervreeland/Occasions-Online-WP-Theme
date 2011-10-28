@@ -3,6 +3,9 @@
 <div class="ruled left"><span class="head2 ruled-text-left">My Account</span></div>
 <?php
 
+//added by Ben Kaplan - 10/28/11 - prints out dev or www depending upon environment
+$subdomain = print_subdomain();
+
 if (isset($_SESSION['user_id'])) { 
 
   if (!is_advertiser()) {
@@ -37,8 +40,8 @@ if (isset($_SESSION['user_id'])) {
 	<p>
 	<a href="<?php echo PAGE_SETTINGS; ?>">Account Settings</a>
 	<br /><a href="<?php echo PAGE_PAYMENT; ?>">Make a Payment</a>
-	<br /><a href="http://www.occasionsonline.com/submissions">Editorial Submissions</a>
-	<br /><a href="http://www.occasionsonline.com/networking-events">Networking Events</a>
+	<br /><a href="http://<?php echo $subdomain; ?>.occasionsonline.com/submissions">Editorial Submissions</a>
+	<br /><a href="http://<?php echo $subdomain; ?>.occasionsonline.com/networking-events">Networking Events</a>
 	<br /><a href="<?php echo PAGE_CONTACTUS; ?>">Contact Us</a>
 	<br /><a href="<?php echo PAGE_FAQ; ?>">Frequently Asked Questions</a>
 	<br /><a id="advertiser_tc_link2" href="<?php echo PAGE_TERMS; ?>">Advertiser Terms &amp; Conditions</a>

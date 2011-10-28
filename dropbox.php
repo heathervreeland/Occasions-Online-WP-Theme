@@ -3,6 +3,9 @@
 Template Name: Dropbox
 */
 
+// added by Ben Kaplan - 10/28/11 - prints out dev or www depending upon environment
+$subdomain = print_subdomain();
+
 $a = explode( '/', $_SERVER['REQUEST_URI']);
 $acct = $a[2];
 if ($acct) {
@@ -15,7 +18,7 @@ if ($_REQUEST['submitted'] == '1') {
 		$acct = '';
 	}
 	else {
-		header('Location: http://www.occasionsonline.com/dropbox/' . sanitizeFilename($_REQUEST['comp']) );
+		header('Location: http://' . $subdomain . '.occasionsonline.com/dropbox/' . sanitizeFilename($_REQUEST['comp']) );
 		exit;
 	}
 }

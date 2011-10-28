@@ -1,3 +1,9 @@
+<?php
+
+// added by Ben Kaplan - 10/28/11 - prints out dev or www depending upon environment
+$subdomain = print_subdomain();
+
+?>
 <div class="ruled left"><span class="head2 ruled-text-left">Build your Occasions Magazine Badge</span></div>
 
 <script type="text/javascript">
@@ -8,7 +14,7 @@
 		var theight = ((bsize/125) * 120);
 		var btype = $("input[name='badge_type']:checked", '#badge_form').val();
 		var bcat = $("#badge_cat").val();
-		var badgedata = '<div style="text-align: center; border: 1px solid #DDD; width: ' + bsize + 'px;"><a href="http://www.occasionsonline.com/" target="_blank"><img style="display: block;" src="http://www.occasionsonline.com/media/images/occasions_badge_' + bsize + 'w.jpg" alt="Occasions Magazine ' + btype + ' Atlanta ' + bcat + '" /><div style="text-align: center; font-family: arial; font-size: 12px; padding: 4px 0px;">' + btype + ' Atlanta ' + bcat + '</div></a></div>';
+		var badgedata = '<div style="text-align: center; border: 1px solid #DDD; width: ' + bsize + 'px;"><a href="http://<?php echo $subdomain; ?>.occasionsonline.com/" target="_blank"><img style="display: block;" src="http://<?php echo $subdomain; ?>.occasionsonline.com/media/images/occasions_badge_' + bsize + 'w.jpg" alt="Occasions Magazine ' + btype + ' Atlanta ' + bcat + '" /><div style="text-align: center; font-family: arial; font-size: 12px; padding: 4px 0px;">' + btype + ' Atlanta ' + bcat + '</div></a></div>';
 		
 		$("#badgelive").html(badgedata);
 		$("#badgecode").width(twidth);
@@ -62,11 +68,11 @@
 </p>
 
 <div id="badgelive" style="float: left; padding-right: 20px;">
-	<div style="text-align: center; border: 1px solid #DDD; width: 125px;"><a href="http://www.occasionsonline.com/" target="_blank"><img style="display: block;" src="http://www.occasionsonline.com/media/images/occasions_badge_125w.jpg" alt="Occasions Magazine Preferred Vendor" /><div style="text-align: center; font-family: arial; font-size: 12px; padding: 4px 0px;">Featured Atlanta Photographer</div></a></div>
+	<div style="text-align: center; border: 1px solid #DDD; width: 125px;"><a href="http://<?php echo $subdomain; ?>.occasionsonline.com/" target="_blank"><img style="display: block;" src="http://<?php echo $subdomain; ?>.occasionsonline.com/media/images/occasions_badge_125w.jpg" alt="Occasions Magazine Preferred Vendor" /><div style="text-align: center; font-family: arial; font-size: 12px; padding: 4px 0px;">Featured Atlanta Photographer</div></a></div>
 </div>
 <div style="margin: 0px; text-align: left;">
 	<p>Paste the following text into your web page.<br /><a href="#" onclick="$('#badgecode').focus().select(); return false;">Select All Text Below</a></p>
-	<div><textarea id="badgecode" onfocus="this.select();" onclick="this.select();" style="font-family: arial; font-size: 12px; width: 435px; height: 120px;" name="txt_comments" rows="7" cols="20" id="txt_comments"><?php echo htmlentities('<div style="text-align: center; border: 1px solid #DDD; width: 104px;"><a href="http://www.occasionsonline.com/" target="_blank"><img style="display: block;" src="/media/images/occasions_badge_125.jpg" title="Occasions Magazine Preferred Vendor" /><div style="text-align: center; font-family: arial; font-size: 12px; padding-top: 4px;">Featured Atlanta Photographer</div></a></div>'); ?></textarea></div>
+	<div><textarea id="badgecode" onfocus="this.select();" onclick="this.select();" style="font-family: arial; font-size: 12px; width: 435px; height: 120px;" name="txt_comments" rows="7" cols="20" id="txt_comments"><?php echo htmlentities('<div style="text-align: center; border: 1px solid #DDD; width: 104px;"><a href="http://' . $subdomain . '.occasionsonline.com/" target="_blank"><img style="display: block;" src="/media/images/occasions_badge_125.jpg" title="Occasions Magazine Preferred Vendor" /><div style="text-align: center; font-family: arial; font-size: 12px; padding-top: 4px;">Featured Atlanta Photographer</div></a></div>'); ?></textarea></div>
 </div>
 <div class="clear"></div>
 </form>

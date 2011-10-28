@@ -5,6 +5,9 @@
 include_once($img_base_path . '/media/js/class.upload.php');
 include_once('libchart/classes/libchart.php');
 
+// added by Ben Kaplan - 10/28/11 - prints out dev or www depending upon environment
+$subdomain = print_subdomain();
+
 // let all of WP know that we are in the guide area
 //ao_set_in_guide(true);
 
@@ -128,7 +131,7 @@ if (1 == 2) {
 			load_vendorimages($profile, $a);
 			if ($a['image_count'] > 8) {
 				$i++;
-				$url = "https://www.atlantaoccasions.com/vendors/profile/{$a['id']}/pa";
+				$url = "https://' . $subdomain . '.atlantaoccasions.com/vendors/profile/{$a['id']}/pa";
 				echo '<input name="accepts_paypal" type="checkbox" value="1" /> ', "$i: <a href='$url'>{$a['name']}</a> ({$a['image_count']})<br />\n";
 			}
 		}

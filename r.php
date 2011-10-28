@@ -2,6 +2,9 @@
 
 /* Template Name: Redirect Utility */
 
+// added by Ben Kaplan - 10/28/11 - prints out dev or www depending upon environment
+$subdomain = print_subdomain();
+
 $url .= pods_url_variable(1);
 $i = 1;
 while ($i < 20) {
@@ -13,7 +16,7 @@ while ($i < 20) {
 }
 
 if (!$url) {
-	header("Location: http://www.occasionsonline.com/");
+	header("Location: http://{$subdomain}.occasionsonline.com/");
 	exit;
 }
 

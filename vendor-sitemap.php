@@ -7,6 +7,9 @@ header ("Content-Type:text/xml");
 
 include_once('guide-functions.php');
 
+// added by Ben Kaplan - 10/28/11 - prints out dev or www depending upon environment
+$subdomain = print_subdomain();
+
 $stamp = date("Y-m-d");
 
 echo <<<XMLOUT
@@ -28,7 +31,7 @@ if( $vp->getTotalRows() > 0 ) {
 
 echo <<<XMLOUT
 	<url>
-		<loc>http://www.occasionsonline.com/profile/$slug</loc>
+		<loc>http://$subdomain.occasionsonline.com/profile/$slug</loc>
 		<lastmod>$stamp</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
@@ -44,7 +47,7 @@ XMLOUT;
 
 echo <<<XMLOUT
 	<url>
-		<loc>http://www.occasionsonline.com/atlanta</loc>
+		<loc>http://$subdomain.occasionsonline.com/atlanta</loc>
 		<lastmod>$stamp</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
@@ -59,7 +62,7 @@ if( $categories->getTotalRows() > 0 ) {
 
 echo <<<XMLOUT
 	<url>
-		<loc>http://www.occasionsonline.com/atlanta/$slug</loc>
+		<loc>http://$subdomain.occasionsonline.com/atlanta/$slug</loc>
 		<lastmod>$stamp</lastmod>
 		<changefreq>always</changefreq>
 		<priority>0.8</priority>
@@ -81,7 +84,7 @@ if( $types->getTotalRows() > 0 ) {
 
 echo <<<XMLOUT
 	<url>
-		<loc>http://www.occasionsonline.com/atlanta/venues/$slug</loc>
+		<loc>http://$subdomain.occasionsonline.com/atlanta/venues/$slug</loc>
 		<lastmod>$stamp</lastmod>
 		<changefreq>always</changefreq>
 		<priority>0.7</priority>
