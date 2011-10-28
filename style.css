@@ -152,12 +152,12 @@ ul > a:hover, ol > a:hover, li > a:hover {
 			}
 		
 	#oo-links {
-        font-family: GillSansLight, 'Arial Narrow', Arial, sans-serif;
+        font-family: GillSansRegular, 'Arial Narrow', Arial, sans-serif;
 		display: block;
 		float: right;
 		height: 30px;
 		padding: 18px 15px 0px 0px;
-		font-weight: bold;
+		font-weight: normal;
 		text-align: right;
 		text-shadow: #FFF 0.1em 0.1em 0.05em;
 		}
@@ -460,9 +460,9 @@ MENUS
 			}
 	
 #submenubar {
-    font-family: GillSansLight, 'Arial Narrow', Arial, sans-serif;
+    font-family: GillSansRegular, 'Arial Narrow', Arial, sans-serif;
     font-size: 14px;
-	font-weight: bold;
+	font-weight: normal;
 	display: block;
 	position: relative;
 	margin: 0px 0px 0px 0px;
@@ -478,7 +478,7 @@ MENUS
 		margin: 0px 15px 0px 10px;
 		font-family: QuillineScriptThinRegular, Arial, Sans-Serif;
 		color: #464626;
-		font-weight: 900;
+		font-weight: normal;
 		font-size: 20px;
 		text-transform: none;
 	}
@@ -1580,8 +1580,8 @@ h3 { font-size: 18px; line-height: 20px; margin: 10px 0px 5px 0px;}
 .ao3footertitle {
 	font-family: QuillineScriptThinRegular, Arial, Sans-Serif;
 	color: #464626;
-	font-weight: 900;
-	font-size: 20px;
+	font-weight: normal;
+	font-size: 23px;
 	text-transform: none;
 	margin: 0px;
 	padding: 0px 0px 10px 0px;
@@ -1898,7 +1898,8 @@ NOT SURE
 **********************************************
 */
 .thread-alt {
-	background-color: #f8f8f8;
+	background-color: #E6F3F1;
+    border: 6px solid #CEE8E3 !important;
 }
 .thread-even {
 	background-color: white;
@@ -1947,9 +1948,12 @@ border: 1px solid #ddd;
 	}
 
 .commentlist cite, .commentlist cite a {
-	font-weight: bold;
-	font-style: normal;
-	font-size: 1.1em;
+	color: #00A79D;
+    font-family: GillSansLight;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+	margin-right:2px;
 	}
 
 .commentlist p {
@@ -1964,6 +1968,7 @@ border: 1px solid #ddd;
 
 .commentmetadata {
 	font-weight: normal;
+	margin-top:5px;
 	}
 
 #sidebar {
@@ -2261,9 +2266,11 @@ select {
 	}
 
 #commentform input {
-	width: 170px;
-	padding: 2px;
-	margin: 5px 5px 1px 0;
+	background: none repeat scroll 0 0 #E9E9E0;
+    border: 3px solid #D3D2CA;
+    margin: 5px 5px 1px 0;
+    padding: 5px;
+    width: 250px;
 	}
 
 #commentform {
@@ -2271,7 +2278,9 @@ select {
 	}
 #commentform textarea {
 	width: 100%;
-	padding: 2px;
+	background: #E9E9E0;
+    border: 3px solid #D3D2CA;
+    padding: 5px;
 	}
 #respond:after {
 		content: "."; 
@@ -2281,8 +2290,16 @@ select {
 	    visibility: hidden;
 	}
 #commentform #submit {
-	margin: 0 0 5px auto;
-	float: right;
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #00A79D;
+    color: #00A79D;
+    float: left;
+    font-family: GillSansRegular,Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    margin: 20px 0 40px;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 170px;
 	}
 /* End Form Elements */
 
@@ -2301,7 +2318,8 @@ select {
 
 .commentlist li {
 	margin: 15px 0 10px;
-	padding: 5px 5px 10px 10px;
+	border: 4px double #CCCCCC;
+	padding: 20px 10px 10px;
 	list-style: none;
 
 	}
@@ -3375,5 +3393,28 @@ label {
   padding:10px;
   border:1px solid #ABC178;
 }
+
+
+/*
+**********************************************
+NEW BLOG STYLES BY JILL
+**********************************************
+*/
+
+#respond h3 {
+    font-size: 24px !important;
+    margin: 40px 0 20px !important;
+}
+
+h3#comments {
+line-height: normal;
+font-size:24px !important;
+}
+
+div.comment-author .avatar {
+display: none;
+}
+
+
 
 
